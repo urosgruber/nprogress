@@ -259,8 +259,9 @@
     if (parent != document.body) {
       addClass(parent, 'nprogress-custom-parent');
     }
-
-    parent.appendChild(progress);
+    if (parent != null) {
+      parent.appendChild(progress);
+    }
     return progress;
   };
 
